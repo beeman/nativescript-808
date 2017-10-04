@@ -1,15 +1,14 @@
 <StackLayout class="page">
   <Label text="NS-808" class="h1 text-center p-t-16 p-b-4" ></Label>
-  <ScrollView>
-    <WrapLayout orientation="horizontal" class="p-8">
-      <ng-container *ngFor="let sound of sounds">
-        <RL:Ripple  rippleColor="#c8c8c8" class="label-button">
-          <Button class="btn btn-primary"
-                  width="46%"
-                  [text]="sound.name"
-                  (tap)="play(sound)"></Button>
+  <GridLayout>
+    <GridView [items]="sounds" colWidth="50%" rowHeight="50">
+      <ng-template let-item="item" let-odd="odd">
+        <RL:Ripple rippleColor="#30bcff">
+          <Button class="btn btn-outline"
+          [text]="item.name"
+          (tap)="play(item)"></Button>
         </RL:Ripple>
-      </ng-container>
-    </WrapLayout>
-  </ScrollView>
+      </ng-template>
+    </GridView>
+  </GridLayout>
 </StackLayout>

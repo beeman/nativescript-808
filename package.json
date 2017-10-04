@@ -23,6 +23,7 @@
     "@angular/router": "~4.2.0",
     "nativescript-angular": "~4.2.0",
     "nativescript-audio": "^4.0.3",
+    "nativescript-grid-view": "^3.2.1",
     "nativescript-ripple": "^2.0.0",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
