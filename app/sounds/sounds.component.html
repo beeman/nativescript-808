@@ -2,11 +2,14 @@
   <Label text="NS-808" class="h1 text-center p-t-16 p-b-4" ></Label>
   <ScrollView>
     <WrapLayout orientation="horizontal" class="p-8">
-      <Button class="btn btn-primary"
-              width="46%"
-              *ngFor="let sound of sounds"
-              [text]="sound.name"
-              (tap)="play(sound)"></Button>
+      <ng-container *ngFor="let sound of sounds">
+        <RL:Ripple  rippleColor="#c8c8c8" class="label-button">
+          <Button class="btn btn-primary"
+                  width="46%"
+                  [text]="sound.name"
+                  (tap)="play(sound)"></Button>
+        </RL:Ripple>
+      </ng-container>
     </WrapLayout>
   </ScrollView>
 </StackLayout>
